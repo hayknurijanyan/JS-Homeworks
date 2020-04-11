@@ -82,3 +82,15 @@ function flatten(array, result) {
 }
   
   console.log(flatten([[1,2,3],[[4,5],6,[7,8,9]]], []))
+
+
+// ex 5
+
+  function sumOfDigits(n){
+  if (n<10) {
+  	return n;
+  } else {
+  	return sumOfDigits (n%10 + sumOfDigits(Math.floor(n/10)))
+  }
+  }
+console.log(sumOfDigits(14))
