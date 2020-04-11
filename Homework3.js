@@ -2,7 +2,7 @@
 
 ////ex1 
 
-function numToDigits (number) {
+function checkOdd (number) {
 debugger
    let array =number.toString();
    let digits= array.split('')
@@ -16,12 +16,12 @@ debugger
     else if (i>1){
     if(digits.pop()%2!==0){
  
-    return (numToDigits(Math.floor(number/10)))
+    return (checkOdd(Math.floor(number/10)))
   }
 } return false
 } 
 
-console.log(numToDigits(132543))
+console.log(checkOdd(132543))
 
 
 // ex 2
