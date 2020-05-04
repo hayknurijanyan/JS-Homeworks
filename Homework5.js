@@ -22,24 +22,16 @@ getIndex(arr1,2)
 
 
 // binary search
-let arr1 = [1,2,3,3,4,5,6,7,8,9,0];
-function binarySearch(arr,value){
 
+function binarySearch(arr,value){
   let high = arr.length-1;
   let low = 0;
-  let mid = 0;
-  let array=[] 
+  let mid = 0;   
   
   while (low <= high){
     mid = Math.floor((high+low)/2)
-    if(arr.indexOf(value) == mid){
-            array.push(mid)
-            for(let i=mid+1; i<arr.length;i++){
-            if(arr[i]===arr[mid]){
-                array.push(i)
-            }
-            }
-      return array
+    if(arr[mid] == value){
+      return arr.indexOf(arr[mid],0);
     } else if (value >arr[mid]){
       low = mid+1
     } else {
@@ -49,4 +41,4 @@ function binarySearch(arr,value){
   return "not exist"
 }
 
-console.log(binarySearch(arr1,3))
+binarySearch([3,5,7,8,9,23,33,45,67,78,88,89,123],33)
