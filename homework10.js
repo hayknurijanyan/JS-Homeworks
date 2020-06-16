@@ -283,7 +283,7 @@ class Teacher extends Person {
     set program(v) {
         if (typeof v === 'string') {
             this._program = v
-        } else throw new Error("PLease enter text")
+        } else throw new Error("invalid text")
     }
     get pay() {
         return this._pay
