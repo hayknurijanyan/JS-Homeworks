@@ -269,3 +269,29 @@ let program2 = ['physics','chemistry','english']
 let s = new Student('Hayk','Nurijanyan','male',27,program1,2020,455000)
 
 console.log(s)
+
+
+class Teacher extends Person {
+    constructor(args,program, pay) {
+        super(...args)
+        this.program = program;
+        this.pay = pay;
+    }
+    get program() {
+        return this._program
+    }
+    set program(v) {
+        if (typeof v === 'string') {
+            this._program = v
+        } else throw new Error("PLease enter text")
+    }
+    get pay() {
+        return this._pay
+    }
+    set pay(v) {
+        this._pay = v
+    }
+    toString() {
+        return `Salery: ${this.pay}`
+    }
+}
