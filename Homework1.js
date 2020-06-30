@@ -15,3 +15,4 @@ function frequency (arr,number){
 console.log(frequency(arr1,1))
 console.log(frequency(arr1,2))
 console.log(frequency(arr1,3))
+
