@@ -35,3 +35,25 @@ function numberAndStringCount (arr){
 }
 
 console.log(numberAndStringCount(arr1))
+
+
+
+/*ex 4
+Write a function that accepts a string(a sentence) as a parameter and finds the longest
+word within the string․ If there are several words which are the longest ones, print the
+last word(words can be separated by space, comma or hyphen).
+*/
+let string1 ="A revolution without dancing is a revolution not having"
+
+function findLongestWord(string){
+    let arr= string.split(' ').join().split('-').join().split(',');
+    let longestWord = "";
+    for (let i=0; i<arr.length;i++){
+        if(arr[i].length>=longestWord.length){
+            longestWord=arr[i]
+        }
+    }
+    return longestWord  
+}
+
+console.log(findLongestWord(string1))
